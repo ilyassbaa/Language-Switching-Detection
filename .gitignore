@@ -1,5 +1,6 @@
 # Python environment
 .venv/
+.gradio/
 env/
 venv/
 __pycache__/
