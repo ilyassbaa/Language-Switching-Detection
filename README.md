@@ -29,7 +29,7 @@ The system utilizes a fine-tuned **XLM-RoBERTa** model to perform token classifi
 ## Getting Started
 
 ### Prerequisites
-Ensure you have Python 3.10 installed. Clone this repository and set up your virtual environment:
+Ensure you have Python 3.11 installed. Clone this repository and set up your virtual environment:
 
 ```bash
 # Clone the repository
