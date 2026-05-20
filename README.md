@@ -12,8 +12,6 @@ This project was developed as part of a module at **Faculté Polydisciplinaire d
 ## Project Architecture
 The system utilizes a fine-tuned **XLM-RoBERTa** model to perform token classification. The pipeline is designed for local processing, ensuring data privacy and utilizing AMD GPU acceleration (via DirectML).
 
-
-
 ## Key Features
 * **Trilingual Detection:** Classifies input tokens into Darija (DA), French (FR), and English (EN) labels.
 * **Automated Data Factory:** A custom pipeline that performs cleaning, sanitization, and pseudo-labeling of raw datasets.
@@ -21,7 +19,7 @@ The system utilizes a fine-tuned **XLM-RoBERTa** model to perform token classifi
 * **Hardware Optimized:** Leverages local AMD GPU resources for high-performance training and inference.
 
 ## Technologies Used
-* **Languages:** Python 3.10
+* **Languages:** Python 3.11
 * **Frameworks:** PyTorch, Hugging Face Transformers (`XLM-RoBERTa`)
 * **Libraries:** Pandas (Data manipulation), Gradio (Web UI), Torch-DirectML (GPU support)
 * **Data Format:** CSV-based token classification schema
