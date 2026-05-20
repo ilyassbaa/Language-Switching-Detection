@@ -1,0 +1,19 @@
+# Python environment
+.venv/
+env/
+venv/
+__pycache__/
+*.py[cod]
+
+# Sensitive Data / Secrets
+.env
+*.token
+
+# Data & Models (Only push if they are under 100MB)
+data/dataset.csv
+data/dataset_clean.csv
+results/
+saved_model/
+
+# System files
+.DS_Store
