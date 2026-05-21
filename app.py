@@ -65,20 +65,31 @@ def detect_code_switching(text):
         
     return highlighted_output
 
-# 3. Visual Interface
+# 3. Visual Interface (Optimized for Mobile)
 theme = gr.themes.Soft()
-with gr.Blocks(theme=theme) as app:
+with gr.Blocks(theme=theme, css=".gradio-container {max-width: 700px !important;}") as app:
     gr.Markdown("# 🇲🇦 Moroccan Code-Switching Detector")
     gr.Markdown("Detecting Darija, French, and English in mixed-text sentences.")
     
-    with gr.Row():
-        text_input = gr.Textbox(label="Enter a mixed sentence", placeholder="E.g., Chof dik la voiture it looks amazing wlh.", scale=3)
-        analyze_btn = gr.Button("Analyze Sentence", variant="primary", scale=1)
+    # Using a Column layout ensures the button stacks under the textbox on small screens
+    with gr.Column():
+        text_input = gr.Textbox(
+            label="Enter a mixed sentence", 
+            placeholder="E.g., Chof dik la voiture it looks amazing...", 
+            lines=3 # Bigger input area for thumbs
+        )
+        analyze_btn = gr.Button("Analyze Sentence", variant="primary")
         
-    # The output box with updated terminology
+    # The output box
     output = gr.HighlightedText(
         label="Detection Results",
-        color_map={"Darija": "green", "French": "blue", "English": "red"}
+        color_map={"Darija": "#22c55e", "French": "#3b82f6", "English": "#ef4444"}
+    )
+    
+    # Optional: Example inputs for quick testing
+    gr.Examples(
+        examples=["Chof dik la voiture it looks amazing", "Ana need ndir mise-a-jour", "slm monsieur 3afak you can add chwiya diyal les mots"],
+        inputs=text_input
     )
     
     analyze_btn.click(fn=detect_code_switching, inputs=text_input, outputs=output)
