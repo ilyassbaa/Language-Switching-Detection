@@ -61,4 +61,4 @@ Try testing the model with this trilingual sentence:
 > *slm monsieur 3afak you can add chwiya diyal les mots*
 
 The system will output a color-coded analysis showing the Darija, French, and English segments.
-![Code-Switching Detection Interface](assets\interface.png)
+![Code-Switching Detection Interface](assets/interface.png)
