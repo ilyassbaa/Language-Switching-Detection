@@ -67,7 +67,7 @@ def detect_code_switching(text):
 
 # 3. Visual Interface (Optimized for Mobile)
 theme = gr.themes.Soft()
-with gr.Blocks(theme=theme, css=".gradio-container {max-width: 700px !important;}") as app:
+with gr.Blocks(theme=theme, css=".gradio-container {max-width: 900px !important; margin: auto !important;}") as app:
     gr.Markdown("# 🇲🇦 Moroccan Code-Switching Detector")
     gr.Markdown("Detecting Darija, French, and English in mixed-text sentences.")
     
