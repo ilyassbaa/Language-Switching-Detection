@@ -23,4 +23,4 @@ If you have an idea for a new feature or an improvement:
 5. Open a Pull Request.
 
 ## Code of Conduct
-Please note that this project is released with a [Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project, you agree to abide by its terms.
+Please note that this project is released with a [Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project, you agree to abide by its terms.git add CONTRIBUTING.md
